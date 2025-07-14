@@ -1,0 +1,707 @@
+        /* Variables globales usando :root */
+        :root {
+            /* Colores predeterminados para el modo claro */
+            --bg-color: #ECF0F1; /* Gris claro */
+            --text-color: #34495E; /* Gris azulado */
+            --header-bg: #2C3E50; /* Azul oscuro casi negro */
+            --header-text: #ECF0F1; /* Gris claro */
+            --logo-color: #50E3C2; /* Verde menta */
+            --nav-link-color: #ECF0F1; /* Gris claro */
+            --nav-link-hover-color: #50E3C2; /* Verde menta */
+            --hero-gradient-start: #4A90E2; /* Azul vibrante */
+            --hero-gradient-end: #50E3C2; /* Verde menta */
+            --hero-button-bg: #2C3E50; /* Azul oscuro casi negro */
+            --hero-button-text: #ECF0F1; /* Gris claro */
+            --section-bg: white;
+            --section-title-color: #2C3E50; /* Azul oscuro casi negro */
+            --section-title-underline: #4A90E2; /* Azul vibrante */
+            --feature-item-bg: #ECF0F1; /* Gris claro */
+            --feature-item-text: #2C3E50; /* Azul oscuro casi negro */
+            --feature-item-hover-bg: #50E3C2; /* Verde menta */
+            --feature-item-hover-text: white;
+            --card-bg: #ECF0F1; /* Gris claro */
+            --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --tutor-name-color: #2C3E50; /* Azul oscuro casi negro */
+            --tutor-specialty-color: #4A90E2; /* Azul vibrante */
+            --testimonial-quote-color: #34495E; /* Gris azulado */
+            --testimonial-author-color: #4A90E2; /* Azul vibrante */
+            --footer-bg: #2C3E50; /* Azul oscuro casi negro */
+            --footer-text: #ECF0F1; /* Gris claro */
+            --footer-border: #4A90E2; /* Azul vibrante */
+            --footer-title-color: #50E3C2; /* Verde menta */
+            --footer-link-color: #ECF0F1; /* Gris claro */
+            --footer-link-hover-color: #50E3C2; /* Verde menta */
+            --theme-toggle-bg: #2C3E50; /* Azul oscuro casi negro */
+            --theme-toggle-ball: #ECF0F1; /* Gris claro */
+            --theme-toggle-checked-bg: #4A90E2; /* Azul vibrante */
+            --theme-toggle-checked-ball: #2C3E50; /* Azul oscuro casi negro */
+        }
+
+        /* Variables para el modo oscuro - se sobrescriben cuando la clase dark-mode está activa */
+        body.dark-mode {
+            --bg-color: #1A1A2E;
+            --text-color: #E0E0EB;
+            --header-bg: #10101A;
+            --header-text: #E0E0EB;
+            --logo-color: #4A90E2; /* Azul vibrante para el logo en modo oscuro */
+            --nav-link-color: #E0E0EB;
+            --nav-link-hover-color: #4A90E2; /* Azul vibrante para hover en modo oscuro */
+            --hero-gradient-start: #1A1A2E;
+            --hero-gradient-end: #10101A;
+            --hero-button-bg: #50E3C2; /* Verde menta */
+            --hero-button-text: #2C3E50; /* Azul oscuro casi negro */
+            --section-bg: #2C2C40;
+            --section-title-color: #E0E0EB;
+            --section-title-underline: #50E3C2; /* Verde menta */
+            --feature-item-bg: #1A1A2E;
+            --feature-item-text: #E0E0EB;
+            --feature-item-hover-bg: #4A90E2; /* Azul vibrante */
+            --feature-item-hover-text: #ECF0F1; /* Gris claro */
+            --card-bg: #2C2C40;
+            --card-shadow: rgba(0, 0, 0, 0.4);
+            --tutor-name-color: #E0E0EB;
+            --tutor-specialty-color: #50E3C2; /* Verde menta */
+            --testimonial-quote-color: #E0E0EB;
+            --testimonial-author-color: #50E3C2; /* Verde menta */
+            --footer-bg: #10101A;
+            --footer-text: #E0E0EB;
+            --footer-border: #50E3C2; /* Verde menta */
+            --footer-title-color: #4A90E2; /* Azul vibrante */
+            --footer-link-color: #E0E0EB;
+            --footer-link-hover-color: #4A90E2; /* Azul vibrante */
+            --theme-toggle-bg: #4A90E2; /* Azul vibrante */
+            --theme-toggle-ball: #2C3E50; /* Azul oscuro casi negro */
+            --theme-toggle-checked-bg: #50E3C2; /* Verde menta */
+            --theme-toggle-checked-ball: #1A1A2E; /* Fondo oscuro */
+        }
+
+        /* Estilos generales */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth; /* Desplazamiento suave al hacer clic en enlaces de anclaje */
+        }
+
+        body {
+            font-family: var(--font-family-main);
+            line-height: 1.6;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            overflow-x: hidden; /* Evita el scroll horizontal */
+            transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+        }
+
+        /* Contenedor principal para centrar el contenido */
+        .container {
+            max-width: 1400px; /* Ajustado para el breakpoint más grande */
+            margin: 0 auto;
+            padding: 0 calc(var(--spacing-unit) * 2); /* Más padding en pantallas grandes */
+        }
+
+        /* Estilos del encabezado (Header) */
+        .header {
+            background-color: var(--header-bg);
+            color: var(--header-text);
+            padding: var(--spacing-unit) 0;
+            position: sticky; /* Encabezado pegajoso */
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--card-shadow);
+            transition: background-color var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+        }
+
+        .header__content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .header__logo {
+            font-size: 2rem; /* Tamaño de fuente inicial */
+            font-weight: 700;
+            color: var(--logo-color);
+        }
+
+        .header__nav-list {
+            list-style: none;
+            display: flex;
+            gap: 2.5rem; /* Espaciado inicial */
+        }
+
+        .header__nav-link {
+            text-decoration: none;
+            color: var(--nav-link-color);
+            font-weight: 600;
+            padding: 0.5rem 0;
+            transition: color var(--transition-speed) ease, transform var(--transition-speed) ease;
+            font-size: 1.1rem; /* Tamaño de fuente inicial */
+        }
+
+        .header__nav-link:hover {
+            color: var(--nav-link-hover-color);
+            transform: translateY(-3px);
+        }
+
+        /* Estilos del Theme Switcher */
+        .theme-switcher {
+            display: flex;
+            align-items: center;
+            margin-left: 2rem; /* Espacio entre el menú y el toggle */
+        }
+
+        .theme-switcher__checkbox {
+            display: none; /* Oculta el checkbox nativo */
+        }
+
+        .theme-switcher__label {
+            width: 60px;
+            height: 30px;
+            background-color: var(--theme-toggle-bg);
+            border-radius: 15px;
+            position: relative;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 5px;
+            transition: background-color var(--transition-speed) ease;
+            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Usamos pseudo-elementos para los íconos de sol y luna */
+        .theme-switcher__label::before,
+        .theme-switcher__label::after {
+            content: ''; /* Se define en cada pseudo-elemento */
+            font-size: 1.2rem;
+            position: absolute;
+            transition: opacity var(--transition-speed) ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 20px; /* Ajusta el ancho para centrar el emoji */
+        }
+
+        .theme-switcher__label::before { /* Ícono de sol (modo claro) */
+            content: '☀️';
+            left: 5px;
+            color: #FDB813; /* Color del sol */
+            opacity: 1;
+        }
+
+        .theme-switcher__label::after { /* Ícono de luna (modo oscuro) */
+            content: '🌙';
+            right: 5px;
+            color: #C0C0C0; /* Color de la luna */
+            opacity: 0;
+        }
+
+        .theme-switcher__ball {
+            width: 24px;
+            height: 24px;
+            background-color: var(--theme-toggle-ball);
+            border-radius: 50%;
+            position: absolute;
+            left: 3px;
+            transition: transform var(--transition-speed) ease, background-color var(--transition-speed) ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Estado "checked" (Modo Oscuro) */
+        .theme-switcher__checkbox:checked + .theme-switcher__label {
+            background-color: var(--theme-toggle-checked-bg);
+        }
+
+        .theme-switcher__checkbox:checked + .theme-switcher__label .theme-switcher__ball {
+            transform: translateX(30px); /* Mueve la bola a la derecha */
+            background-color: var(--theme-toggle-checked-ball);
+        }
+
+        /* Controla la opacidad de los íconos con el estado checked */
+        .theme-switcher__checkbox:checked + .theme-switcher__label::before {
+            opacity: 0; /* Oculta el sol */
+        }
+
+        .theme-switcher__checkbox:checked + .theme-switcher__label::after {
+            opacity: 1; /* Muestra la luna */
+        }
+
+        /* Estilos de la sección Hero */
+        .hero-section {
+            background: linear-gradient(135deg, var(--hero-gradient-start), var(--hero-gradient-end));
+            color: white;
+            text-align: center;
+            padding: 8rem calc(var(--spacing-unit) * 2); /* Más padding en pantallas grandes */
+            min-height: 70vh; /* Altura mínima inicial */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: background var(--transition-speed) ease;
+        }
+
+        .hero-section__title {
+            font-size: 4rem; /* Tamaño de fuente inicial */
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .hero-section__description {
+            font-size: 1.8rem; /* Tamaño de fuente inicial */
+            max-width: 900px;
+            margin-bottom: 3rem;
+            opacity: 0.9;
+        }
+
+        .hero-section__button {
+            display: inline-block;
+            background-color: var(--hero-button-bg);
+            color: var(--hero-button-text);
+            padding: 1.2rem 2.5rem;
+            border-radius: var(--border-radius-small);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem; /* Tamaño de fuente inicial */
+            transition: background-color var(--transition-speed) ease, transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+        }
+
+        .hero-section__button:hover {
+            background-color: #1A252F; /* Un tono más oscuro */
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Estilos de las secciones generales */
+        .section {
+            padding: 6rem calc(var(--spacing-unit) * 2); /* Más padding en pantallas grandes */
+            margin-bottom: 3rem;
+            background-color: var(--section-bg);
+            border-radius: var(--border-radius-small);
+            box-shadow: var(--card-shadow);
+            transition: background-color var(--transition-speed) ease, box-shadow var(--transition-speed) ease, color var(--transition-speed) ease;
+        }
+
+        .section:hover {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .section__title {
+            font-size: 3.2rem; /* Tamaño de fuente inicial */
+            color: var(--section-title-color);
+            text-align: center;
+            margin-bottom: 4rem;
+            position: relative;
+            padding-bottom: 1.5rem;
+            transition: color var(--transition-speed) ease;
+        }
+
+        .section__title::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            width: 100px; /* Ancho inicial */
+            height: 5px; /* Grosor inicial */
+            background-color: var(--section-title-underline);
+            border-radius: 2px;
+            transition: background-color var(--transition-speed) ease;
+        }
+
+        /* Estilos de la sección "Acerca del Curso" */
+        .about-course__content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about-course__text {
+            font-size: 1.2rem; /* Tamaño de fuente inicial */
+            margin-bottom: 1.8rem;
+            color: var(--text-color);
+            transition: color var(--transition-speed) ease;
+        }
+
+        .about-course__features-list {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem; /* Espaciado inicial */
+            margin-top: 3rem;
+        }
+
+        .about-course__feature-item {
+            background-color: var(--feature-item-bg);
+            padding: 1.2rem 2rem;
+            border-radius: var(--border-radius-small);
+            font-weight: 600;
+            color: var(--feature-item-text);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+            transition: transform var(--transition-speed) ease, background-color var(--transition-speed) ease, color var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+            font-size: 1.05rem;
+        }
+
+        .about-course__feature-item:hover {
+            transform: translateY(-8px) scale(1.02);
+            background-color: var(--feature-item-hover-bg);
+            color: var(--feature-item-hover-text);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Estilos de la sección "Tutores" */
+        .tutors-section__grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Tamaño de columna inicial */
+            gap: 2.5rem; /* Espaciado inicial */
+            justify-content: center;
+        }
+
+        .tutors-section__card {
+            background-color: var(--card-bg);
+            padding: 2rem;
+            border-radius: var(--border-radius-small);
+            box-shadow: var(--card-shadow);
+            text-align: center;
+            transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease, background-color var(--transition-speed) ease;
+        }
+
+        .tutors-section__card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        .tutors-section__image {
+            width: 140px; /* Tamaño inicial */
+            height: 140px; /* Tamaño inicial */
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1.5rem;
+            border: 5px solid var(--tutor-specialty-color); /* Usar el color de especialidad para el borde */
+            transition: border-color var(--transition-speed) ease;
+        }
+
+        .tutors-section__card:hover .tutors-section__image {
+            border-color: var(--logo-color); /* Cambiar a color de logo en hover */
+        }
+
+        .tutors-section__name {
+            font-size: 1.7rem; /* Tamaño de fuente inicial */
+            font-weight: 700;
+            color: var(--tutor-name-color);
+            margin-bottom: 0.6rem;
+            transition: color var(--transition-speed) ease;
+        }
+
+        .tutors-section__specialty {
+            font-size: 1.1rem; /* Tamaño de fuente inicial */
+            color: var(--tutor-specialty-color);
+            margin-bottom: 1.2rem;
+            transition: color var(--transition-speed) ease;
+        }
+
+        .tutors-section__bio {
+            font-size: 1rem; /* Tamaño de fuente inicial */
+            color: var(--text-color);
+            transition: color var(--transition-speed) ease;
+        }
+
+        /* Estilos de la sección "Opiniones de Estudiantes" */
+        .testimonials-section__grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Tamaño de columna inicial */
+            gap: 2.5rem; /* Espaciado inicial */
+            justify-content: center;
+        }
+
+        .testimonials-section__card {
+            background-color: var(--card-bg);
+            padding: 2rem;
+            border-radius: var(--border-radius-small);
+            box-shadow: var(--card-shadow);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 220px; /* Altura mínima inicial */
+            transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease, background-color var(--transition-speed) ease;
+        }
+
+        .testimonials-section__card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        .testimonials-section__quote {
+            font-size: 1.15rem; /* Tamaño de fuente inicial */
+            font-style: italic;
+            color: var(--testimonial-quote-color);
+            margin-bottom: 1.5rem;
+            transition: color var(--transition-speed) ease;
+        }
+
+        .testimonials-section__author {
+            font-weight: 600;
+            color: var(--testimonial-author-color);
+            font-size: 1.05rem; /* Tamaño de fuente inicial */
+            margin-top: auto; /* Empuja el autor hacia abajo */
+            transition: color var(--transition-speed) ease;
+        }
+
+        /* Estilos del pie de página (Footer) */
+        .footer {
+            background-color: var(--footer-bg);
+            color: var(--footer-text);
+            padding: 4rem 0; /* Padding inicial */
+            text-align: center;
+            border-top: 5px solid var(--footer-border);
+            transition: background-color var(--transition-speed) ease, border-top-color var(--transition-speed) ease, color var(--transition-speed) ease;
+        }
+
+        .footer__content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 2.5rem; /* Espaciado inicial */
+            padding: 0 var(--spacing-unit);
+        }
+
+        .footer__section {
+            flex: 1;
+            min-width: 280px; /* Ancho mínimo inicial */
+            text-align: left;
+        }
+
+        .footer__section-title {
+            font-size: 1.4rem; /* Tamaño de fuente inicial */
+            font-weight: 700;
+            color: var(--footer-title-color);
+            margin-bottom: 1.2rem;
+            transition: color var(--transition-speed) ease;
+        }
+
+        .footer__contact-info p {
+            margin-bottom: 0.6rem;
+            font-size: 1rem; /* Tamaño de fuente inicial */
+        }
+
+        .footer__contact-info a {
+            color: var(--footer-link-color);
+            text-decoration: none;
+            transition: color var(--transition-speed) ease;
+        }
+
+        .footer__contact-info a:hover {
+            color: var(--footer-link-hover-color);
+        }
+
+        .footer__social-links {
+            list-style: none;
+            display: flex;
+            gap: 1.2rem; /* Espaciado inicial */
+            margin-top: 1.2rem;
+        }
+
+        .footer__social-link {
+            color: var(--footer-link-color);
+            font-size: 1.8rem; /* Tamaño de fuente inicial */
+            transition: color var(--transition-speed) ease, transform var(--transition-speed) ease;
+        }
+
+        .footer__social-link:hover {
+            color: var(--footer-link-hover-color);
+            transform: scale(1.2);
+        }
+
+        .footer__copyright {
+            margin-top: 4rem;
+            font-size: 0.9rem; /* Tamaño de fuente inicial */
+            opacity: 0.8;
+        }
+
+        /* ------------------------------------ */
+        /* Media Queries para Responsividad por Breakpoint */
+        /* ------------------------------------ */
+
+        /* Escritorios grandes y monitores (Max-width: 1440px) */
+        @media screen and (max-width: 1440px) {
+            .container {
+                max-width: 1200px;
+                padding: 0 var(--spacing-unit);
+            }
+            .hero-section__title { font-size: 3.8rem; }
+            .hero-section__description { font-size: 1.7rem; }
+            .section__title { font-size: 3rem; }
+            .tutors-section__grid, .testimonials-section__grid {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            }
+        }
+
+        /* Laptops y tabletas grandes (Max-width: 1024px) */
+        @media screen and (max-width: 1024px) {
+            .container {
+                max-width: 960px;
+            }
+            .header__nav-list { gap: 2rem; }
+            .header__nav-link { font-size: 1rem; }
+            .hero-section { padding: 7rem var(--spacing-unit); min-height: 65vh; }
+            .hero-section__title { font-size: 3.2rem; }
+            .hero-section__description { font-size: 1.5rem; }
+            .hero-section__button { padding: 1rem 2rem; font-size: 1rem; }
+            .section { padding: 5rem var(--spacing-unit); margin-bottom: 2.5rem; }
+            .section__title { font-size: 2.8rem; margin-bottom: 3.5rem; }
+            .about-course__text { font-size: 1.1rem; }
+            .about-course__features-list { gap: 1.5rem; }
+            .about-course__feature-item { padding: 1rem 1.8rem; font-size: 1rem; }
+            .tutors-section__grid, .testimonials-section__grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 2rem;
+            }
+            .tutors-section__image { width: 120px; height: 120px; }
+            .tutors-section__name { font-size: 1.5rem; }
+            .tutors-section__specialty { font-size: 1rem; }
+            .testimonials-section__card { min-height: 200px; }
+            .testimonials-section__quote { font-size: 1.1rem; }
+            .footer { padding: 3.5rem 0; }
+            .footer__content { gap: 2rem; }
+            .footer__section { min-width: 220px; }
+            .footer__section-title { font-size: 1.3rem; }
+            .footer__contact-info p { font-size: 0.95rem; }
+            .footer__social-link { font-size: 1.6rem; }
+            .footer__copyright { margin-top: 3.5rem; }
+        }
+
+        /* Tabletas (Max-width: 768px) */
+        @media screen and (max-width: 768px) {
+            .container {
+                padding: 0 var(--spacing-unit);
+            }
+            .header__content {
+                flex-direction: column;
+                text-align: center;
+            }
+            .header__logo { font-size: 1.6rem; }
+            .header__nav-list {
+                flex-direction: column;
+                gap: 0.8rem;
+                margin-top: 1rem;
+            }
+            .header__nav-link { padding: 0.4rem 1rem; font-size: 0.95rem; }
+            .hero-section { padding: 6rem var(--spacing-unit); min-height: 60vh; }
+            .hero-section__title { font-size: 2.5rem; margin-bottom: 1rem; }
+            .hero-section__description { font-size: 1.2rem; margin-bottom: 2rem; }
+            .hero-section__button { padding: 0.9rem 1.8rem; font-size: 0.95rem; }
+            .section { padding: 4rem var(--spacing-unit); margin-bottom: 2rem; }
+            .section__title { font-size: 2.2rem; margin-bottom: 3rem; }
+            .section__title::after { width: 70px; height: 3px; }
+            .about-course__text { font-size: 1rem; margin-bottom: 1.5rem; }
+            .about-course__features-list { gap: 1rem; margin-top: 2rem; }
+            .about-course__feature-item { padding: 0.8rem 1.2rem; font-size: 0.9rem; }
+            .tutors-section__grid, .testimonials-section__grid {
+                grid-template-columns: 1fr; /* Una columna en tabletas */
+                gap: 1.5rem;
+            }
+            .tutors-section__card { padding: 1.5rem; }
+            .tutors-section__image { width: 100px; height: 100px; border-width: 3px; }
+            .tutors-section__name { font-size: 1.4rem; }
+            .tutors-section__specialty { font-size: 0.9rem; }
+            .tutors-section__bio { font-size: 0.9rem; }
+            .testimonials-section__card { padding: 1.5rem; min-height: 180px; }
+            .testimonials-section__quote { font-size: 1rem; margin-bottom: 1rem; }
+            .testimonials-section__author { font-size: 0.95rem; }
+            .footer { padding: 3rem 0; }
+            .footer__content { flex-direction: column; align-items: center; gap: 1.5rem; }
+            .footer__section { text-align: center; min-width: unset; width: 100%; }
+            .footer__section-title { font-size: 1.2rem; margin-bottom: 0.8rem; }
+            .footer__contact-info p { font-size: 0.9rem; }
+            .footer__social-links { justify-content: center; gap: 1rem; margin-top: 0.8rem; }
+            .footer__social-link { font-size: 1.4rem; }
+            .footer__copyright { margin-top: 2.5rem; font-size: 0.8rem; }
+        }
+
+        /* Teléfonos grandes (Max-width: 425px) */
+        @media screen and (max-width: 425px) {
+            .hero-section { padding: 5rem var(--spacing-unit); min-height: 55vh; }
+            .hero-section__title { font-size: 2rem; }
+            .hero-section__description { font-size: 1rem; }
+            .hero-section__button { padding: 0.7rem 1.4rem; font-size: 0.85rem; }
+            .section { padding: 2.5rem var(--spacing-unit); margin-bottom: 1.5rem; }
+            .section__title { font-size: 1.8rem; margin-bottom: 2.5rem; }
+            .section__title::after { width: 60px; }
+            .about-course__text { font-size: 0.95rem; }
+            .about-course__feature-item { padding: 0.7rem 1rem; font-size: 0.85rem; }
+            .tutors-section__card, .testimonials-section__card { padding: 1.2rem; }
+            .tutors-section__image { width: 90px; height: 90px; }
+            .tutors-section__name { font-size: 1.3rem; }
+            .tutors-section__specialty { font-size: 0.85rem; }
+            .tutors-section__bio { font-size: 0.85rem; }
+            .testimonials-section__card { min-height: 160px; }
+            .testimonials-section__quote { font-size: 0.95rem; }
+            .testimonials-section__author { font-size: 0.9rem; }
+            .footer { padding: 2.5rem 0; }
+            .footer__section-title { font-size: 1.1rem; }
+            .footer__contact-info p { font-size: 0.85rem; }
+            .footer__social-link { font-size: 1.2rem; }
+            .footer__copyright { margin-top: 2rem; font-size: 0.75rem; }
+        }
+
+        /* Teléfonos medianos (Max-width: 375px) */
+        @media screen and (max-width: 375px) {
+            .header__logo { font-size: 1.4rem; }
+            .header__nav-list { gap: 0.6rem; }
+            .header__nav-link { font-size: 0.9rem; }
+            .hero-section { padding: 4rem var(--spacing-unit); min-height: 50vh; }
+            .hero-section__title { font-size: 1.8rem; }
+            .hero-section__description { font-size: 0.9rem; }
+            .hero-section__button { padding: 0.6rem 1.2rem; font-size: 0.8rem; }
+            .section { padding: 2rem var(--spacing-unit); }
+            .section__title { font-size: 1.6rem; margin-bottom: 2rem; }
+            .section__title::after { width: 50px; }
+            .about-course__text { font-size: 0.9rem; }
+            .about-course__feature-item { font-size: 0.8rem; }
+            .tutors-section__image { width: 80px; height: 80px; }
+            .tutors-section__name { font-size: 1.2rem; }
+            .tutors-section__specialty { font-size: 0.8rem; }
+            .tutors-section__bio { font-size: 0.8rem; }
+            .testimonials-section__card { min-height: 140px; }
+            .testimonials-section__quote { font-size: 0.9rem; }
+            .testimonials-section__author { font-size: 0.85rem; }
+            .footer { padding: 2rem 0; }
+            .footer__section-title { font-size: 1rem; }
+            .footer__contact-info p { font-size: 0.8rem; }
+            .footer__social-link { font-size: 1.1rem; }
+        }
+
+        /* Teléfonos pequeños (Max-width: 320px) */
+        @media screen and (max-width: 320px) {
+            .header__logo { font-size: 1.3rem; }
+            .header__nav-list { gap: 0.5rem; }
+            .header__nav-link { font-size: 0.85rem; padding: 0.3rem 0.8rem; }
+            .hero-section { padding: 3rem var(--spacing-unit); min-height: 45vh; }
+            .hero-section__title { font-size: 1.6rem; }
+            .hero-section__description { font-size: 0.85rem; }
+            .hero-section__button { padding: 0.5rem 1rem; font-size: 0.75rem; }
+            .section { padding: 1.5rem var(--spacing-unit); }
+            .section__title { font-size: 1.4rem; margin-bottom: 1.5rem; }
+            .section__title::after { width: 40px; }
+            .about-course__text { font-size: 0.85rem; }
+            .about-course__feature-item { font-size: 0.75rem; padding: 0.6rem 0.8rem; }
+            .tutors-section__image { width: 70px; height: 70px; }
+            .tutors-section__name { font-size: 1.1rem; }
+            .tutors-section__specialty { font-size: 0.75rem; }
+            .tutors-section__bio { font-size: 0.75rem; }
+            .testimonials-section__card { min-height: 120px; }
+            .testimonials-section__quote { font-size: 0.85rem; }
+            .testimonials-section__author { font-size: 0.8rem; }
+            .footer { padding: 1.5rem 0; }
+            .footer__section-title { font-size: 0.9rem; }
+            .footer__contact-info p { font-size: 0.75rem; }
+            .footer__social-link { font-size: 1rem; }
+            .footer__copyright { margin-top: 1.5rem; font-size: 0.7rem; }
+        }

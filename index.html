@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeMaster Academy - Aprende a Programar</title>
+    <!-- Enlace a la fuente Inter de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"
+
+</head>
+<body>
+    <!-- Header of the page -->
+    <header class="header">
+        <div class="container header__content">
+            <div class="header__logo">CodeMaster Academy</div>
+            <nav class="header__nav">
+                <ul class="header__nav-list">
+                    <li><a href="#about-course" class="header__nav-link">Acerca del Curso</a></li>
+                    <li><a href="#tutors" class="header__nav-link">Tutores</a></li>
+                    <li><a href="#testimonials" class="header__nav-link">Opiniones</a></li>
+                    <li><a href="#contact" class="header__nav-link">Contacto</a></li>
+                </ul>
+            </nav>
+            <!-- Theme Switcher -->
+            <div class="theme-switcher">
+                <input type="checkbox" id="theme-toggle" class="theme-switcher__checkbox">
+                <label for="theme-toggle" class="theme-switcher__label">
+                    <!-- Los íconos de sol y luna ahora se manejan con pseudo-elementos CSS -->
+                    <span class="theme-switcher__ball"></span>
+                </label>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Hero Section: Course Introduction -->
+        <section id="hero" class="hero-section">
+            <div class="container">
+                <h1 class="hero-section__title">¡Domina el Código con CodeMaster Academy!</h1>
+                <p class="hero-section__description">
+                    Aprende los lenguajes de programación más demandados, construye proyectos increíbles y lanza tu carrera tecnológica.
+                </p>
+                <a href="#about-course" class="hero-section__button">Explora Nuestros Cursos</a>
+            </div>
+        </section>
+
+        <!-- "About Course" Section -->
+        <section id="about-course" class="section about-course">
+            <div class="container">
+                <h2 class="section__title">Acerca de Nuestro Curso</h2>
+                <div class="about-course__content">
+                    <p class="about-course__text">
+                        En CodeMaster Academy, creemos que aprender a programar debe ser accesible, práctico y divertido. Nuestro curso integral está diseñado para llevarte desde los fundamentos absolutos hasta la creación de aplicaciones complejas, sin importar tu experiencia previa.
+                    </p>
+                    <p class="about-course__text">
+                        Cubrimos una amplia gama de lenguajes y tecnologías, asegurando que adquieras un conjunto de habilidades versátil y listo para el mercado laboral. Con proyectos prácticos, soporte personalizado y una comunidad activa, te preparamos para el éxito.
+                    </p>
+                    <ul class="about-course__features-list">
+                        <li class="about-course__feature-item">Python para Ciencia de Datos y Desarrollo Web</li>
+                        <li class="about-course__feature-item">JavaScript y Frameworks Modernos (React, Vue)</li>
+                        <li class="about-course__feature-item">Desarrollo Backend con Node.js y Bases de Datos</li>
+                        <li class="about-course__feature-item">Fundamentos de Algoritmos y Estructuras de Datos</li>
+                        <li class="about-course__feature-item">Control de Versiones con Git y GitHub</li>
+                        <li class="about-course__feature-item">Proyectos del Mundo Real y Portafolio</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- "Tutors" Section -->
+        <section id="tutors" class="section tutors-section">
+            <div class="container">
+                <h2 class="section__title">Nuestros Tutores Expertos</h2>
+                <div class="tutors-section__grid">
+                    <!-- Tutor 1 -->
+                    <div class="tutors-section__card">
+                        <img src="https://placehold.co/140x140/4A90E2/FFFFFF?text=JS" alt="Foto de Tutor Juan Pérez" class="tutors-section__image">
+                        <h3 class="tutors-section__name">Juan Pérez</h3>
+                        <p class="tutors-section__specialty">Especialista en JavaScript y Frontend</p>
+                        <p class="tutors-section__bio">
+                            Con más de 10 años de experiencia en desarrollo web, Juan es un apasionado de JavaScript y frameworks como React. Su enfoque es hacer que el código complejo sea fácil de entender.
+                        </p>
+                    </div>
+                    <!-- Tutor 2 -->
+                    <div class="tutors-section__card">
+                        <img src="https://placehold.co/140x140/50E3C2/FFFFFF?text=PY" alt="Foto de Tutora María García" class="tutors-section__image">
+                        <h3 class="tutors-section__name">María García</h3>
+                        <p class="tutors-section__specialty">Experta en Python y Ciencia de Datos</p>
+                        <p class="tutors-section__bio">
+                            María es una científica de datos con un profundo conocimiento de Python, Machine Learning y análisis de datos. Le encanta guiar a los estudiantes en sus primeros pasos en el mundo de los datos.
+                        </p>
+                    </div>
+                    <!-- Tutor 3 -->
+                    <div class="tutors-section__card">
+                        <img src="https://placehold.co/140x140/2C3E50/FFFFFF?text=DB" alt="Foto de Tutor Carlos Ruiz" class="tutors-section__image">
+                        <h3 class="tutors-section__name">Carlos Ruiz</h3>
+                        <p class="tutors-section__specialty">Desarrollador Backend y Arquitecto de Software</p>
+                        <p class="tutors-section__bio">
+                            Carlos tiene una vasta experiencia en la construcción de sistemas robustos y escalables. Es un maestro en Node.js, bases de datos y la arquitectura de software.
+                        </p>
+                    </div>
+                    <!-- Tutor 4 -->
+                    <div class="tutors-section__card">
+                        <img src="https://placehold.co/140x140/4A90E2/FFFFFF?text=AL" alt="Foto de Tutora Laura Gómez" class="tutors-section__image">
+                        <h3 class="tutors-section__name">Laura Gómez</h3>
+                        <p class="tutors-section__specialty">Especialista en Algoritmos y Estructuras de Datos</p>
+                        <p class="tutors-section__bio">
+                            Laura es una ingeniera de software con un don para explicar conceptos complejos de algoritmos y estructuras de datos de manera clara y concisa.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- "Student Testimonials" Section -->
+        <section id="testimonials" class="section testimonials-section">
+            <div class="container">
+                <h2 class="section__title">Opiniones de Nuestros Estudiantes</h2>
+                <div class="testimonials-section__grid">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonials-section__card">
+                        <p class="testimonials-section__quote">
+                            "¡CodeMaster Academy cambió mi vida! Pasé de no saber nada de programación a conseguir mi primer trabajo como desarrollador frontend en solo 6 meses. Los tutores son increíbles."
+                        </p>
+                        <p class="testimonials-section__author">- Ana López</p>
+                    </div>
+                    <!-- Testimonial 2 -->
+                    <div class="testimonials-section__card">
+                        <p class="testimonials-section__quote">
+                            "La metodología de enseñanza es muy práctica y los proyectos son desafiantes pero muy gratificantes. Aprendí Python y ahora estoy trabajando en análisis de datos. ¡Totalmente recomendado!"
+                        </p>
+                        <p class="testimonials-section__author">- Roberto Fernández</p>
+                    </div>
+                    <!-- Testimonial 3 -->
+                    <div class="testimonials-section__card">
+                        <p class="testimonials-section__quote">
+                            "La comunidad de CodeMaster Academy es fantástica. Siempre hay alguien dispuesto a ayudar y los recursos adicionales son de gran valor. Me siento mucho más segura con mis habilidades."
+                        </p>
+                        <p class="testimonials-section__author">- Sofía Martínez</p>
+                    </div>
+                    <!-- Testimonial 4 -->
+                    <div class="testimonials-section__card">
+                        <p class="testimonials-section__quote">
+                            "Los tutores no solo enseñan código, sino también cómo pensar como un programador. Esto ha sido clave para mi desarrollo profesional. ¡Una inversión que vale la pena!"
+                        </p>
+                        <p class="testimonials-section__author">- Diego Herrera</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container footer__content">
+            <div class="footer__section footer__contact-info">
+                <h3 class="footer__section-title">Contacto</h3>
+                <p>Email: <a href="mailto:info@codemaster.com">info@codemaster.com</a></p>
+                <p>Teléfono: <a href="tel:+541123456789">+54 11 2345-6789</a></p>
+                <p>Dirección: Calle Ficticia 123, Ciudad Digital, País Virtual</p>
+            </div>
+            <div class="footer__section footer__social-media">
+                <h3 class="footer__section-title">Síguenos</h3>
+                <ul class="footer__social-links">
+                    <li><a href="#" class="footer__social-link">Facebook</a></li>
+                    <li><a href="#" class="footer__social-link">Twitter</a></li>
+                    <li><a href="#" class="footer__social-link">LinkedIn</a></li>
+                    <li><a href="#" class="footer__social-link">Instagram</a></li>
+                </ul>
+            </div>
+            <div class="footer__section footer__quick-links">
+                <h3 class="footer__section-title">Enlaces Rápidos</h3>
+                <ul class="footer__nav-list">
+                    <li><a href="#about-course" class="header__nav-link">Acerca del Curso</a></li>
+                    <li><a href="#tutors" class="header__nav-link">Tutores</a></li>
+                    <li><a href="#testimonials" class="header__nav-link">Opiniones</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="footer__copyright">&copy; 2025 CodeMaster Academy. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const themeToggle = document.getElementById('theme-toggle');
+            const body = document.body;
+
+            // Check for saved theme preference
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                body.classList.add('dark-mode');
+                themeToggle.checked = true;
+            }
+
+            themeToggle.addEventListener('change', () => {
+                if (themeToggle.checked) {
+                    body.classList.add('dark-mode');
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    body.classList.remove('dark-mode');
+                    localStorage.setItem('theme', 'light');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
